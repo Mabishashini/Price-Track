@@ -89,7 +89,7 @@ export async function generateEmailBody(
         pass:process.env.EMAIL_PASSWORD,
     },
     maxConnections: 1
-  })
+  }as any)
 
   export const sendEmail = async (emailContent: EmailContent, sendTo: string[]) => {
     const mailOptions = {
