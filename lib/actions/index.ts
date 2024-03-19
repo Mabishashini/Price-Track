@@ -90,9 +90,9 @@ export async function getSimilarProducts(productId: string){
 }
 
  export async function addUserEmailToProduct(productId: string, userEmail : string){
+    
     try {
         const product = await Product.findById(productId);
-
         if(!product) return;
 
         const userExists = product.users.some((user: User) => user.email === userEmail);
